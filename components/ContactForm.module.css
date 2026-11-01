@@ -1,0 +1,23 @@
+/* Field-level error styles for ContactForm. The rest of the form uses .form-card / .field
+   etc. from app/globals.css. */
+
+.fieldError {
+  font-size: 14px;
+  font-weight: 500;
+  color: #b42318;
+  line-height: 1.4;
+}
+
+.invalid input,
+.invalid select,
+.invalid textarea {
+  border-color: #e5484d;
+  background: #fff6f6;
+}
+
+.invalid input:focus,
+.invalid select:focus,
+.invalid textarea:focus {
+  border-color: #e5484d;
+  background: var(--white);
+}
