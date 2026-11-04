@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { home } from "@/content/site";
+import { publicImage } from "@/lib/images";
 
 const initials = (name: string) =>
   name
-    .replace(/^(Engr\.|Mr\.|Mrs\.|Ms\.|Dr\.)\s*/i, "")
+    .replace(/^((Engr|Mr|Mrs|Ms|Dr|Prof)\.\s*)+/i, "")
     .replace(/\s+PhD$/i, "")
     .split(/\s+/)
     .filter(Boolean)
@@ -21,11 +22,13 @@ export default function Trustees() {
           <h2>{t.title}</h2>
         </div>
         <ul className="trustee-grid">
-          {t.items.map((p) => (
+          {t.items.map((p) => {
+            const photo = publicImage(p.photo);
+            return (
             <li className="trustee reveal" key={p.name}>
               <div className="trustee-photo">
-                {p.photo ? (
-                  <Image src={p.photo} alt={p.name} fill sizes="(max-width: 560px) 100vw, 380px" />
+                {photo ? (
+                  <Image src={photo} alt={p.name} fill sizes="(max-width: 560px) 100vw, 380px" />
                 ) : (
                   <>
                     <span className="trustee-initials" aria-hidden="true">{initials(p.name)}</span>
@@ -38,7 +41,8 @@ export default function Trustees() {
                 <p>{p.role}</p>
               </div>
             </li>
-          ))}
+            );
+          })}
         </ul>
       </div>
     </section>

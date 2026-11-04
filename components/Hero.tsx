@@ -1,12 +1,14 @@
 import Image from "next/image";
 import { home } from "@/content/site";
+import { publicImage } from "@/lib/images";
 
 export default function Hero() {
   const h = home.hero;
+  const photo = publicImage(h.photo);
   return (
     <section className="hero" id="top">
-      {h.photo ? (
-        <Image className="hero-img" src={h.photo} alt="" fill priority sizes="100vw" />
+      {photo ? (
+        <Image className="hero-img" src={photo} alt="" fill priority sizes="100vw" />
       ) : (
         <>
           {/* Terraced-pit contour motif, stands in until a hero photo is supplied */}

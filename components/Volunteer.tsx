@@ -1,8 +1,11 @@
+import Image from "next/image";
 import Placeholder from "./Placeholder";
+import { publicImage } from "@/lib/images";
 import { home, site } from "@/content/site";
 
 export default function Volunteer() {
   const v = home.volunteer;
+  const photo = publicImage(v.photo);
   return (
     <section className="volunteer" id="volunteer">
       <div className="container">
@@ -17,7 +20,13 @@ export default function Volunteer() {
               <a className="mail" href={site.contact.phones[0].href}>{site.contact.phones[0].label}</a>
             </div>
           </div>
-          <Placeholder art="pit" label="Volunteer photo 900×700" className="vol-art" />
+          {photo ? (
+            <div className="vol-img">
+              <Image src={photo} alt="Volunteers planting trees on reclaimed land" fill sizes="(max-width: 900px) 100vw, 600px" />
+            </div>
+          ) : (
+            <Placeholder art="pit" label="Volunteer photo 900×700" className="vol-art" />
+          )}
         </div>
       </div>
     </section>

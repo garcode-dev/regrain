@@ -47,13 +47,27 @@ The "I'm getting in touch about" options are in `content/site.ts` (`contact.form
 with the client. Any link with `data-interest="volunteer"` (like the Volunteer section's button) opens the
 form with that option selected.
 
+## Photos
+Drop each photo into `public/images/` with the file name below and rebuild (`npm run dev` picks it up on
+restart). It replaces its illustrated placeholder automatically; no code change needed.
+
+| File name | Where it shows | Size |
+| --- | --- | --- |
+| `hero.jpg` | Hero background | 1920×1080 |
+| `reshaping.jpg` | What We Do · Structured reshaping | 800×600 |
+| `stream-channels.jpg` | What We Do · Restoration of stream channels | 800×600 |
+| `reforestation.jpg` | What We Do · Reforestation | 800×600 |
+| `volunteer.jpg` | Volunteer With Us panel | 900×700 |
+| `trustee-rex-hegen-aii.jpg` | Trustees · Engr. Rex Hegen Aii PhD | 600×750 |
+| `trustee-benjamin-gar.jpg` | Trustees · Mr. Benjamin Gar | 600×750 |
+
+The hero, card and volunteer photos were AI-generated in Canva as stand-ins. Swap in real project photos
+when the NGO has them. Trustee portraits must be real photos supplied by the trustees.
+
 ## Still to do before launch
 Search the code for `TODO`:
 - **Contact form:** add the Resend environment variables above.
 - **Email:** set to `info@regreenreclaimafrica.org`. Confirm the domain and create the inbox, or change it once in `content/site.ts`.
-- **Trustee portraits:** 600×750 each. Put them in `public/images/` and set each trustee's `photo` in `content/site.ts`.
-- **Photos:** the hero, the three What We Do cards and the volunteer panel use illustrated stand-ins
-  (`components/Placeholder.tsx`). Put photos in `public/images/`. For the hero, set `home.hero.photo`
-  in `content/site.ts` (1920×1080). Cards are 800×600, the volunteer panel 900×700.
+- **Photos:** see Photos below.
 - **Open Graph image:** add `public/og.png` (1200×630) in `app/layout.tsx`.
 - **Brand colours:** taken from the logo (forest green, leaf green, lime, sun gold, water blue). Confirm with the client.
