@@ -108,6 +108,8 @@ a:focus-visible,.btn:focus-visible,button:focus-visible{outline:3px solid var(--
 .ph-terraces{background:repeating-linear-gradient(-12deg,#2f6b33 0 22px,#3d7f3c 22px 44px,#4d8f40 44px 66px)}
 .ph-stream{background:radial-gradient(ellipse 80% 30% at 50% 60%, #1c8fc0 0 40%, transparent 41%), linear-gradient(#3a7d3a,#2c6630)}
 .ph-trees{background:radial-gradient(circle at 25% 35%,#8cc63f 0 14%,transparent 15%),radial-gradient(circle at 62% 30%,#5fa63c 0 18%,transparent 19%),radial-gradient(circle at 80% 62%,#8cc63f 0 13%,transparent 14%),radial-gradient(circle at 40% 72%,#4c9a37 0 16%,transparent 17%),#1f5a2c}
+.card-img{position:relative;aspect-ratio:4/3}
+.card-img img{object-fit:cover}
 .card-body{padding:28px 28px 32px}
 .card h3{color:var(--white)}
 .card .num{font-family:var(--font-head);font-size:14px;color:var(--lime-400);font-weight:600;letter-spacing:.08em;margin-bottom:14px;display:block}
@@ -192,6 +194,10 @@ footer address{font-style:normal}
 .check-big{display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:var(--leaf-500);color:#fff}
 .check-big svg{width:30px;height:30px}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+
+.vol-img{position:relative;min-height:380px}
+.vol-img img{object-fit:cover}
+@media (max-width:900px){.vol-img{min-height:260px;order:-1}}
 
 /* FOOTER */
 footer{background:#0a1510;color:rgba(255,255,255,.72);padding:100px 0 0;overflow:hidden}

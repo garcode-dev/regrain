@@ -41,8 +41,8 @@ export const home = {
     lead: "A not-for-profit organisation whose foremost objective is the reclamation of abandoned open mines across Nigeria.",
     primary: { label: "Volunteer With Us", href: "#volunteer" },
     secondary: { label: "What We Do", href: "#what" },
-    // TODO: hero photo, 1920×1080 — a reclaimed or reforested mine site. Put it in /public/images and set the path.
-    photo: null as string | null,
+    // Photo file in /public/images (1920×1080). Shown automatically once the file exists.
+    photo: "hero.jpg",
   },
   who: {
     eyebrow: "Who We Are",
@@ -63,11 +63,12 @@ export const home = {
     title: "From neglected mine sites to thriving ecosystems.",
     lead:
       "Re-green & Reclaim Africa Initiative is committed to providing efficient and resourceful solutions to the threats abandoned mine lands pose to human health and the environment. We convert neglected mining sites closed without proper reclamation into thriving ecosystems through structured reshaping, restoration of stream channels and reforestation.",
-    // TODO: one photo per method, 800×600
+    // Photo files in /public/images (800×600). Each shows automatically once the file exists;
+    // until then the card shows its illustrated placeholder (`art`).
     methods: [
-      { title: "Structured reshaping", art: "terraces" },
-      { title: "Restoration of stream channels", art: "stream" },
-      { title: "Reforestation", art: "trees" },
+      { title: "Structured reshaping", art: "terraces", photo: "reshaping.jpg" },
+      { title: "Restoration of stream channels", art: "stream", photo: "stream-channels.jpg" },
+      { title: "Reforestation", art: "trees", photo: "reforestation.jpg" },
     ],
   },
   mission: {
@@ -99,10 +100,10 @@ export const home = {
   trustees: {
     eyebrow: "Our Trustees",
     title: "The people guiding our work.",
-    // TODO: trustee portraits, 600×750 each, in /public/images (set `photo` to the path)
+    // Portrait files in /public/images (600×750). Each shows automatically once the file exists.
     items: [
-      { name: "Engr. Rex Hegen Aii PhD", role: "Board Chairman", photo: null as string | null },
-      { name: "Mr. Benjamin Gar", role: "Board Secretary", photo: null as string | null },
+      { name: "Engr. Rex Hegen Aii PhD", role: "Board Chairman", photo: "trustee-rex-hegen-aii.jpg" },
+      { name: "Mr. Benjamin Gar", role: "Board Secretary", photo: "trustee-benjamin-gar.jpg" },
     ],
   },
   volunteer: {
@@ -116,7 +117,8 @@ export const home = {
     // Opens the contact form with "Volunteering" selected.
     buttonHref: "#contact",
     buttonInterest: "volunteer",
-    // TODO: volunteer photo, 900×700
+    // Photo file in /public/images (900×700). Shown automatically once the file exists.
+    photo: "volunteer.jpg",
   },
   footer: {
     tagline: "Reclaiming abandoned open mines across Nigeria for environmental restoration and community wellbeing.",
