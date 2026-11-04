@@ -4,7 +4,7 @@ import { publicImage } from "@/lib/images";
 
 const initials = (name: string) =>
   name
-    .replace(/^(Engr\.|Mr\.|Mrs\.|Ms\.|Dr\.)\s*/i, "")
+    .replace(/^((Engr|Mr|Mrs|Ms|Dr|Prof)\.\s*)+/i, "")
     .replace(/\s+PhD$/i, "")
     .split(/\s+/)
     .filter(Boolean)
